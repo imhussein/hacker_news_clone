@@ -1,3 +1,7 @@
+/**
+ * Articles Context
+ */
+
 import contextCreation from "../context/context";
 import articlesReducer from "./reducers/articles.reducer";
 import { getNewArticles, getTopArticles } from "./actions/articles.action";

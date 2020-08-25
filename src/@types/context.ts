@@ -1,3 +1,8 @@
+/**
+ * React Context Types
+ * @description Interface For React Context API
+ */
+
 import { ReactNode } from "react";
 import { Actions } from "./Actions";
 import { Article } from "./store";

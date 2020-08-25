@@ -1,3 +1,7 @@
+/**
+ * Articles reducer function
+ */
+
 import { ArticleState, ArticleActions } from "../../@types/store";
 import { Actions } from "../../@types/Actions";
 

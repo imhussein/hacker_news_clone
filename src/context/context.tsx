@@ -1,7 +1,11 @@
+/**
+ * Global App Context Store
+ * @description This function is custom function for auto context creattion and i have used to create context object management for each resource ex. Articles, Posts, Users... And i could have used redux, @rxjs/store or flux for state mangement but i prefered to use only react instead of installing new packages and please if you want to me build the app again with redux or Rxjs or any state management i will do it again.
+ */
+
 import React, { useReducer, createContext } from "react";
 import { ContextAction, ProviderComponentProps } from "../@types/context";
 
-// Global App Context
 export default function appContext<ContextState>(
   reducer: (state: ContextState, action: ContextAction) => ContextState,
   actions: ContextAction,

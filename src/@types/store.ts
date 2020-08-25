@@ -1,3 +1,8 @@
+/**
+ * App Resources Interface
+ * @description React Context Store Interafces
+ */
+
 import { Actions } from "./Actions";
 
 export interface Article {
