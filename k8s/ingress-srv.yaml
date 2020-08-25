@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-nginx-srv
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+    - host: http://167.179.80.242/
+      http:
+        paths:
+          - path: /?(.*)
+            backend:
+              serviceName: hacker-news-cluster-ip-srv
+              servicePort: 3000

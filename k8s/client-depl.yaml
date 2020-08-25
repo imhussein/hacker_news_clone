@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hacker_news
+  template:
+    metadata:
+      labels:
+        app: hacker_news
+    spec:
+      containers:
+        - name: hacker_news_app
+          image: mh10445/hackernews
+          ports:
+            - containerPort: 3000
