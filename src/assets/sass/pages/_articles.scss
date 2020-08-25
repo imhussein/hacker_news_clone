@@ -1,0 +1,16 @@
+.content {
+  min-height: calc(100vh - (var(--headerHeight) + 1rem));
+  background-color: var(--bgColor);
+  border-bottom: 0.2rem solid var(--mainColor);
+}
+
+.show-more {
+  padding-left: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: var(--greyColor);
+}

@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+// Components
+import TopArticles from "./components/pages/TopArticles";
+import NewArticles from "./components/pages/NewArticles";
+import Header from "./components/layouts/Header";
+import { ArticlesProvider } from "./store/articles.context";
+
+/**
+ * Main App Component
+ * @params props {}
+ * @description Main App Component
+ * @function Function Component
+ */
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ArticlesProvider>
+      <div className="App container">
+        <Router>
+          <Header />
+          <div className="content">
+            <Switch>
+              <Route exact path="/">
+                <NewArticles />
+              </Route>
+              <Route exact path="/top">
+                <TopArticles />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    </ArticlesProvider>
   );
 }
-
-export default App;

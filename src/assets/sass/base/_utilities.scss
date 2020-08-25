@@ -1,0 +1,27 @@
+$dims: (mr: "margin-right",
+
+  ml: "margin-left",
+
+  mt: "margin-top",
+
+  mb: "margin-bottom",
+
+  pl: "padding-left",
+
+  pt: "padding-top",
+
+  pb: "padding-bottom",
+
+  pr: "padding-right"
+);
+
+@for $i from 1 through 10 {
+
+  @each $dim,
+  $key in $dims {
+    .#{$dim}-#{$i} {
+      #{$key}: #{$i}rem
+    }
+
+  }
+}

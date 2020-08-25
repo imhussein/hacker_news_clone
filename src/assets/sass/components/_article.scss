@@ -1,0 +1,55 @@
+.articles {
+  &__list {
+    list-style-type: none;
+  }
+}
+.article {
+  margin-bottom: 0.4rem;
+  &__content,
+  &__left,
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    margin-right: 0.5rem;
+    color: var(--greyColor);
+  }
+
+  &__index {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+  }
+
+  &__vote {
+    width: 1rem;
+    height: 1rem;
+    border: 0;
+    margin: 0.3rem 0rem 0.2rem;
+    cursor: pointer;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    top: 11px;
+    position: relative;
+  }
+
+  &__title {
+    opacity: 0.8;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  &__site {
+    margin-left: 0.4rem;
+  }
+
+  &__footer,
+  &__site {
+    color: var(--greyColor);
+    font-size: 1.13rem;
+  }
+}

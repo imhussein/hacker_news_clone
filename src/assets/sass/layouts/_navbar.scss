@@ -1,0 +1,61 @@
+.navbar {
+  background-color: var(--mainColor);
+  padding: 0rem 0.3rem;
+
+  &__logo,
+  &__link {
+
+    &:link,
+    &:visited,
+    &:active,
+    &:focus {
+      font-size: inherit;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__logo {
+    margin-right: 2rem;
+  }
+
+  &__brand {
+    color: var(--whiteColor);
+    border: 0.1rem solid var(--whiteColor);
+    padding: 0 0.5rem;
+    margin-right: 0.7rem;
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: var(--fontColor);
+    text-decoration: none;
+    word-spacing: -0.3rem;
+    font-weight: bold;
+  }
+
+  &,
+  &__logo,
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    color: var(--fontColor);
+    font-size: 1.3rem;
+
+    &:not(:last-child) {
+      &::after {
+        content: "|";
+        margin: 0 1rem;
+      }
+    }
+  }
+}
